@@ -1,0 +1,242 @@
+/* error display colour */
+body{
+    background-color: #EFF1F3;
+    /* background-color: #72777c; */
+}
+.bg-base{
+    background-color: #EFF1F3 !important;
+}
+.error-txt{
+    color: red;
+    text-align: right;
+}
+.double-link{
+    text-align: center;
+}
+a, a:link, a:visited, a:hoover, a:active{
+    color :#314cb6 !important;
+}
+/* error ends */
+
+/* progress bar */
+.progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+}
+.progressbar::before, .progress{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+}
+.progress{
+    background-color: #314cb6 !important;
+    width: 0%;
+    transition: 0.5s;
+}
+.progress-step{
+    width: 3rem;
+    height: 3rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+    font-size: 1.2rem;
+}
+.progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(80% + 0.1rem);
+    font-size: 1.2rem;
+    color:  #314cb6;
+}
+.progress-step-active{
+    background-color: #314cb6;
+    color: #f3f3f3;
+    
+}
+/* end of progress bar */
+
+/* start of form */
+.form-step{
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+}
+.form-step-active{
+    display: block;
+}
+.form form .form-step .form-group{
+    position: relative;
+}
+.form form .form-group{
+    position: relative;
+}
+
+.form form .form-group i{
+    position: absolute;
+    right: 15px;
+    color:  #ccc;
+    top:  70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.form form .form-step .form-group i{
+    position: absolute;
+    right: 15px;
+    color:  #ccc;
+    top:  70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* end of form */
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1, 1);
+        opacity : 1;
+    }
+}
+
+/* searching css */
+
+/* start of chat list css */
+.chat-list{
+    max-height: 650px;
+    overflow-y: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* max-height: fit-content; */
+}
+.chat-list a{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding-right: 15px;
+    text-decoration: none !important;
+    border-bottom: 1px solid #e6e6e6;
+
+    margin-bottom: 15px;
+    page-break-after: 10px;
+}
+
+
+.chat-list a:last-child{
+    border: none;
+    margin-bottom: 0px;
+}
+
+.chat-list a .content{
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.chat-list a .content p{
+    color: #314cb6 ;
+}
+.chat-list a .content img{
+    height: 50px;
+    width: 50px;
+}
+.chat-list .content{
+    display: flex;
+    /* align-items: center; */
+}
+.chat-list .content .details{
+    margin-left: 15px;
+    /* color: #000; */
+}
+.content img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+.chat-box img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.chat-list .header img{
+    object-fit: cover;
+    border-radius: 15px;
+    height: 40px;
+    width: 40px;
+}
+.text-black{
+    color: #000;
+}
+
+.chat-list::-webkit-scrollbar{
+    display: none;
+}
+
+/* End of chat list css */
+/* Start of chat box css */
+.chat-box{
+    height: 580px;
+    background-color: #e5e7e9;
+    padding: 10px 30px 20px 30px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.chat-view{
+    height: 510px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.chat-box .chat p{
+    padding: 8px 16px;
+    color: #000;
+}
+.chat-box .outgoing{
+    display: flex;
+}
+.outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 50px);
+}
+.outgoing .details p{
+    background: #314cb6;
+    border-radius: 18px 18px 0 18px;
+}
+.chat-box .chat{
+    margin: 15px 0;
+    display: flex;
+    align-items: flex-end;
+}
+.chat-box .incoming{
+    display: flex;
+    align-items: center;
+}
+/* .chat-box .incoming .details{
+    display: flex;
+    align-items: center;
+} */
+.incoming .details{
+    max-width: calc(100% - 50px);
+    margin-right: auto;
+}
+.incoming .details p{
+    margin-left: 10px;
+    background: #d3c9c9;
+    border-radius: 18px 18px 0 18px;
+}
+/* End of chat list css */
