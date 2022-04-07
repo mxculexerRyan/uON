@@ -226,6 +226,11 @@ a, a:link, a:visited, a:hoover, a:active{
     display: flex;
     align-items: center;
 }
+.back-div{
+    display: flex;
+    align-items: center;
+    padding 10px;
+}
 /* .chat-box .incoming .details{
     display: flex;
     align-items: center;

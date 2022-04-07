@@ -1,15 +1,22 @@
 <?php
     session_start();
+    if(!isset($_SESSION['user_id'])){
+        header("location: ./login.php");
+    }
     include_once("./php/config.php"); 
 ?>
 <div class="chat-area">
     <div class="header">
-        <a href="#" onclick="loadDoc();">
+        <a>
             <div class="content">
-                <img src="./images/zai.jpg" alt="">
+                <div class="back-div">
+                    <span><i id="back"class="fas fa-arrow-left fa-2x"></i></span>
+                    <img src="./images/zai.jpg" alt="">
+                </div>
                 <div class="details text-black">
                     <?php
-                        $sql = "SELECT * FROM users where  u_id = '{$_SESSION['user_id']}'";
+                        $u_id = $_REQUEST["q"];
+                        $sql = "SELECT * FROM users where  u_id = '{$u_id}'";
                         $result = $conn->query($sql);
                         if ($row = $result->fetch_assoc()){
                         }
@@ -20,7 +27,6 @@
             </div>
             <div class="time text-black">
                 <span><i class="fas fa-ellipsis-vertical fa-2x"></i></span>
-                
             </div>
         </a>
     </div>
@@ -79,7 +85,8 @@
                         <input type="text" class="form-control" placeholder="Your Text Here...." id="text">
                     </div>
                     <div class="col-2 ml-0">
-                        <button type="submit" class="btn btn-outline-info"><i class="fas fa-plane"></i></button>
+                        <!-- <button type="submit" class="btn btn-outline-info"><i class="fas fa-plane"></i></button> -->
+                        <input type="button" class="btn btn-outline-info" value="Send">
                     </div>
                 </div>
             </form>

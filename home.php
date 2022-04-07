@@ -47,139 +47,43 @@
                     </section>
 
                     <div class="chat-list" id="chat">
-                        <a href="#" onclick="loadDoc();">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="content">
-                                <img src="./images/zai.jpg" alt="">
-                                <div class="details text-black">
-                                    <span>Fname Lname</span>
-                                    <p>Message</p>
-                                </div>
-                            </div>
-                            <div class="time text-black">
-                                <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
-                                
-                            </div>
-                        </a>
+                        
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            const user_list = document.querySelector(".chat-list");
+            var back = document.getElementById("back");
+            setInterval(() => {
+                let xhr = new XMLHttpRequest();
+                xhr.open("GET", "./php/users/user_list.php", true);
+                xhr.onload = ()=> {
+                    if(xhr.readyState === XMLHttpRequest.DONE){
+                        if(xhr.status === 200){
+                            let data = xhr.response;
+                            if(!user_list.classList.contains("active")){
+                                user_list.innerHTML = data; 
+                            }
+                        }
+                    }
+                }
+                xhr.send();
+            }, 500);
+
+            function loadDoc(id) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if(this.readyState == 4 && this.status == 200){  
+                        user_list.classList.add("active");
+                        document.getElementById("chat").innerHTML =
+                        this.responseText;
+                    }
+                };
+                xhttp.open("GET", "chat.php?q=" + id, true);
+                xhttp.send();
+            }
+        </script>
+        <script src="./js/users/users_list.js"></script>
         <script src="./js/home.js"></script>
         <?php include_once("./includes/footer.php")?>

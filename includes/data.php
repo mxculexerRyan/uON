@@ -1,6 +1,8 @@
 <?php
+    $uid = "";
     while($row = mysqli_fetch_assoc($sql)){
-        $output .= '<a href="#" onclick="loadDoc();">
+        $uid= $row['u_id'];
+        $output .= '<a href="#" onclick="loadDoc('.$uid.');">
                     <div class="content">
                         <img src="./images/zai.jpg" alt="">
                         <div class="details text-black">
