@@ -80,8 +80,12 @@
                         this.responseText;
                     }
                 };
-                xhttp.open("GET", "chat.php?q=" + id, true);
+                xhttp.open("GET", "./chat.php?q=" + id, true);
                 xhttp.send();
+            }
+
+            function stopld(){
+                user_list.classList.remove("active");
             }
         </script>
         <script src="./js/users/users_list.js"></script>

@@ -154,7 +154,6 @@ a, a:link, a:visited, a:hoover, a:active{
 .chat-list a .content img{
     height: 50px;
     width: 50px;
-    margin-left 10px;
 }
 .chat-list .content{
     display: flex;
@@ -230,10 +229,6 @@ a, a:link, a:visited, a:hoover, a:active{
 .back-div{
     display: flex;
     align-items: center;
-    padding 10px;
-}
-.back-div #back{
-    margin 10px;
 }
 /* .chat-box .incoming .details{
     display: flex;

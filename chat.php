@@ -10,7 +10,9 @@
         <a>
             <div class="content">
                 <div class="back-div">
-                    <span><i id="back"class="fas fa-arrow-left fa-2x"></i></span>
+                    <span class="btn btn-outline-info m-2" onclick="stopld()">
+                        <i class="fas fa-arrow-left fa-lg"></i>
+                    </span>
                     <img src="./images/zai.jpg" alt="">
                 </div>
                 <div class="details text-black">
@@ -25,9 +27,9 @@
                     <p><?php echo $row["Email"]; ?></p>
                 </div>
             </div>
-            <div class="time text-black">
-                <span><i class="fas fa-ellipsis-vertical fa-2x"></i></span>
-            </div>
+                <span class="btn btn-outline-info m-2">
+                    <i class="fas fa-ellipsis-vertical fa-lg"></i>
+                </span>
         </a>
     </div>
 
@@ -85,8 +87,9 @@
                         <input type="text" class="form-control" placeholder="Your Text Here...." id="text">
                     </div>
                     <div class="col-2 ml-0">
-                        <!-- <button type="submit" class="btn btn-outline-info"><i class="fas fa-plane"></i></button> -->
-                        <input type="button" class="btn btn-outline-info" value="Send">
+                        <span class="btn btn-outline-info">
+                            <i class="fab fa-telegram-plane fa-lg"></i>
+                        </span>
                     </div>
                 </div>
             </form>
