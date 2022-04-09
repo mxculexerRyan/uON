@@ -124,7 +124,7 @@ a, a:link, a:visited, a:hoover, a:active{
     scrollbar-width: none;
     /* max-height: fit-content; */
 }
-.chat-list a{
+.chat-list .list{
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
@@ -135,23 +135,24 @@ a, a:link, a:visited, a:hoover, a:active{
 
     margin-bottom: 15px;
     page-break-after: 10px;
+    cursor: pointer;
 }
 
 
-.chat-list a:last-child{
+.chat-list .list:last-child{
     border: none;
     margin-bottom: 0px;
 }
 
-.chat-list a .content{
+.chat-list .list .content{
     display: flex;
     justify-content: space-between !important;
 }
 
-.chat-list a .content p{
+.chat-list .list .content p{
     color: #314cb6 ;
 }
-.chat-list a .content img{
+.chat-list .list .content img{
     height: 50px;
     width: 50px;
 }
@@ -173,6 +174,14 @@ a, a:link, a:visited, a:hoover, a:active{
     height: 40px;
     width: 40px;
 }
+.chat-area .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-area .header .header-details{
+    align-items: center;
+}
 .chat-list .header img{
     object-fit: cover;
     border-radius: 15px;
@@ -182,7 +191,12 @@ a, a:link, a:visited, a:hoover, a:active{
 .text-black{
     color: #000;
 }
-
+.my-image{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
 .chat-list::-webkit-scrollbar{
     display: none;
 }

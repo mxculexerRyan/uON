@@ -100,7 +100,7 @@
                         $_SESSION['user_id'] = $row['u_id'];
                         $sql = "UPDATE otp SET otp_status = 'Account_activated' WHERE otp_id = '{$_SESSION['user_id']}'";
                         if($conn->query($sql) === TRUE){
-                            header("Location: ./home.php");
+                            echo "<script>window.location.replace('./home.php')</script>";
                         }else{
                             echo $conn->error;
                         }
@@ -112,7 +112,7 @@
                     echo $row['auth_token'];
                 }else{
                     // echo "Your Account Ready Activated";
-                    header("Location: ./home.php");
+                    echo "<script>window.location.replace('./home.php')</script>";
                     
                 }
             ?>

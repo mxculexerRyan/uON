@@ -32,7 +32,7 @@
   color: #eee !important;
 }
 
-[data-theme="dark"] .chat-list a{
+[data-theme="dark"] .chat-list .list{
   /* border-bottom: 1px solid #314cb6; */
   border-bottom: 1px solid#2e2e2e !important;
 }
@@ -41,7 +41,7 @@
   color :#3bcaee !important
 }
 
-[data-theme="dark"] .chat-list a .content p{
+[data-theme="dark"] .chat-list .list .content p{
   color :#3bcaee !important
 }
 

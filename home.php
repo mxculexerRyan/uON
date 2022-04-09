@@ -23,7 +23,39 @@
         </header>
 
         <div class="row">
-            <div class="col">1 of 3</div>
+            <div class="col">
+                <h4 class="float-left text-info">My Profile</h4><br><br>
+                <div class="row float-left m-2">
+                    <div class="col-12">
+                        <img class="my-image img-thumbnail" src="./images/zai.jpg" alt="">
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-12">
+                        <h5 class="text-black text-center">@joan_doe</h5>
+                    </div>
+                </div> -->
+                <!-- <div class="row">
+                </div>
+                <div>
+                <p class="text-center"> <i class="fa fa-map-marker mr-1" aria-hidden="true"></i>Udom-Cive</p>
+                </div>
+                <div class="row d-flex justify-content-between">
+                    <div class="col align-content-between">
+                    <p>50</p>
+                    <P>Following</P>
+                    </div>
+                    <div class="col">
+                        <p>26.7k</p>
+                        <p>Followers</p>
+                    </div>
+                    <div class="col">
+                        <p>2.1M</p>
+                        <P>Likes</P>
+                    </div>
+                </div> -->
+
+            </div>
             <div class="col-6">2 of 3</div>
             <div class="col">
                 <div class="mb-auto">
@@ -46,6 +78,10 @@
                         </form>
                     </section>
 
+                    <div class="nav justify-content-between">
+                        <input type="button" value="Chats" class="btn btn-outline-info px-5 mb-2">
+                        <input type="button" value="groups" class="btn btn-outline-info px-5 mb-2">
+                    </div>
                     <div class="chat-list" id="chat">
                         
                     </div>

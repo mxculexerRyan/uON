@@ -7,30 +7,30 @@
 ?>
 <div class="chat-area">
     <div class="header">
-        <a>
+        <div>
+            <span class="btn btn-outline-info m-2" onclick="stopld()">
+                <i class="fas fa-arrow-left fa-lg"></i>
+            </span>
+            <img src="./images/zai.jpg" alt="">
+            <?php
+                $u_id = $_REQUEST["q"];
+                $sql = "SELECT * FROM users where  u_id = '{$u_id}'";
+                $result = $conn->query($sql);
+                if ($row = $result->fetch_assoc()){
+                }
+            ?>
+        </div>
+        <div class="header-details">
+            <span><?php echo $row["FName"]." ".$row["lName"] ?></span>
+            <p><?php echo $row["Email"]; ?></p>
+        </div>
             <div class="content">
-                <div class="back-div">
-                    <span class="btn btn-outline-info m-2" onclick="stopld()">
-                        <i class="fas fa-arrow-left fa-lg"></i>
-                    </span>
-                    <img src="./images/zai.jpg" alt="">
-                </div>
                 <div class="details text-black">
-                    <?php
-                        $u_id = $_REQUEST["q"];
-                        $sql = "SELECT * FROM users where  u_id = '{$u_id}'";
-                        $result = $conn->query($sql);
-                        if ($row = $result->fetch_assoc()){
-                        }
-                    ?>
-                    <span><?php echo $row["FName"]." ".$row["lName"] ?></span>
-                    <p><?php echo $row["Email"]; ?></p>
                 </div>
             </div>
-                <span class="btn btn-outline-info m-2">
-                    <i class="fas fa-ellipsis-vertical fa-lg"></i>
-                </span>
-        </a>
+        <span class="btn btn-outline-info m-2">
+            <i class="fas fa-ellipsis-vertical fa-lg"></i>
+        </span>
     </div>
 
     <div class="chat-box bg-base">
