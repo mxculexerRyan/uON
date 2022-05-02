@@ -11,7 +11,7 @@
             <span class="btn btn-outline-info m-2" onclick="stopld()">
                 <i class="fas fa-arrow-left fa-lg"></i>
             </span>
-            <img src="./images/zai.jpg" alt="">
+            <img src="./images/zai.jpg" alt="Zai's image">
             <?php
                 $u_id = $_REQUEST["q"];
                 $sql = "SELECT * FROM users where  u_id = '{$u_id}'";
