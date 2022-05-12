@@ -137,13 +137,10 @@ a, a:link, a:visited, a:hoover, a:active{
     page-break-after: 10px;
     cursor: pointer;
 }
-
-
 .chat-list .list:last-child{
     border: none;
     margin-bottom: 0px;
 }
-
 .chat-list .list .content{
     display: flex;
     justify-content: space-between !important;
@@ -200,18 +197,77 @@ a, a:link, a:visited, a:hoover, a:active{
 .chat-list::-webkit-scrollbar{
     display: none;
 }
-
 /* End of chat list css */
+
+/* Start of group-listcss */
+.group-list{
+    max-height: 650px;
+    overflow-y: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* max-height: fit-content; */
+}
+
+.group-list .list{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding-right: 15px;
+    text-decoration: none !important;
+    border-bottom: 1px solid #e6e6e6;
+
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    cursor: pointer;
+}
+
+.group-list .list:last-child{
+    border: none;
+    margin-bottom: 0px;
+}
+.group-list .list .content{
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.group-list .list .content p{
+    color: #314cb6 ;
+}
+.group-list .list .content img{
+    height: 50px;
+    width: 50px;
+}
+.group-list .content{
+    display: flex;
+}
+.group-list .content .details{
+    margin-left: 15px;
+}
+
+.group-list .header img{
+    object-fit: cover;
+    border-radius: 15px;
+    height: 40px;
+    width: 40px;
+}
+.group-list::-webkit-scrollbar{
+    display: none;
+}
+/* End of group-list css */
+
+
 /* Start of chat box css */
 .chat-box{
-    height: 580px;
+    height: 500px;
     background-color: #e5e7e9;
     padding: 10px 30px 20px 30px;
     border-radius: 20px;
     border: 1px solid black;
 }
 .chat-view{
-    height: 510px;
+    height: 430px;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -258,3 +314,61 @@ a, a:link, a:visited, a:hoover, a:active{
     border-radius: 18px 18px 0 18px;
 }
 /* End of chat list css */
+
+/* :start of status css  */
+.status{
+    width: 100%;
+    height: 11vh;
+    border: 1px solid #314cb6;
+    border-radius: 1px !important;
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: scroll;
+}
+
+.status img{
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+/* :end of status css */
+
+/* :start of post css  */
+.post_section{
+    height: 77vh;
+    overflow-y: scroll;
+}
+.post_cont{
+    height: 37vh;
+    width: 97%;
+    border: 1px solid #314cb6;
+}
+.post_img img{
+    height: 35vh;
+    width: 100%;
+}
+
+.post_desc{
+    height: 9vh;
+    width: 100%;
+    border: 1px solid #314cb6;
+    text-align: center;
+}
+.comments{
+    height: 20vh;
+    border: 1px solid #314cb6 !important;
+    overflow-y: scroll;
+}
+.comments img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.user_comment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* :end of post css  */

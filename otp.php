@@ -3,7 +3,7 @@
     if(!isset($_SESSION['user_id'])){
         header("location: ./login.php");
     }
-    include_once("./php/config.php");
+    include_once("./php/config/config.php");
     include_once("./includes/header.php");
     
 ?>

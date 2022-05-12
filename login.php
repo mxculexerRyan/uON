@@ -1,5 +1,5 @@
 <?php 
-    include_once("./php/config.php");
+    include_once("./php/config/config.php");
     include_once("./includes/header.php");
     ?>
     <body>

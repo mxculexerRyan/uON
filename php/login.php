@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("config.php");
+    include_once("./config/config.php");
     $logid = mysqli_real_escape_string($conn, ($_POST['logid']));
     $passwd = mysqli_real_escape_string($conn, ($_POST['passwd']));
         $sql = "SELECT * FROM users WHERE (Email = '$logid' or Username = '$logid') LIMIT 1";

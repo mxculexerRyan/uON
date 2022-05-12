@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("config.php");
+    include_once("./config/config.php");
     $phone = mysqli_real_escape_string($conn, ($_POST['phone']));
     $passwd = mysqli_real_escape_string($conn, ($_POST['passwd']));
     $auth_token = rand(100000,999999);

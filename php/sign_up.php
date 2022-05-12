@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once("config.php");
+    include_once("./config/config.php");
     $fname = mysqli_real_escape_string($conn, ($_POST['fname']));
     $lname = mysqli_real_escape_string($conn, ($_POST['lname']));
     $uname = mysqli_real_escape_string($conn, ($_POST['uname']));

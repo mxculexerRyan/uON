@@ -4,7 +4,7 @@
         $uid= $row['u_id'];
         $output .= '<div onclick="loadDoc('.$uid.');" class="list">
                     <div class="content">
-                        <img src="./images/zai.jpg" alt="">
+                        <img src="./images/sied.jpg" alt="">
                         <div class="details text-black">
                             <span>'.$row['FName']. " " .$row['lName']. '</span>
                             <p>Message</p>
