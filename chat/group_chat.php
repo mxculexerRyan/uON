@@ -11,7 +11,6 @@
             <span class="btn btn-outline-info m-2" onclick="grp_back()">
                 <i class="fas fa-arrow-left fa-lg"></i>
             </span>
-            <img src="./images/oga.jpg" alt="">
             <?php
                 $g_id = $_REQUEST["q"];
                 $sql = "SELECT * FROM groups where  group_id = '{$g_id}'";
@@ -19,6 +18,8 @@
                 if ($row = $result->fetch_assoc()){
                 }
             ?>
+            
+        <img src="./images/<?php echo $row['g_image'] ?>" alt="">
         </div>
         <div class="header-details">
             <span class="text-center"><?php echo $row["group_name"]?></span>

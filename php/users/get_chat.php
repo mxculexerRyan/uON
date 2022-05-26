@@ -17,8 +17,10 @@
                                     </div>
                                 </div>';
                 }else{
+                    $sql2 = mysqli_query($conn, "SELECT * from users WHERE u_id = '{$incoming_id}'");
+                    $row2 = mysqli_fetch_assoc($sql2);
                     $output .= '<div class="chat incoming">
-                                    <img src="./images/zai.jpg" alt="">
+                                    <img src="./images/'.$row2['Image'].'" alt="">
                                     <div class="details">
                                         <p>'.$row['msg'].'</p>
                                     </div>

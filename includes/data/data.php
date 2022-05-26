@@ -20,7 +20,7 @@
         $uid= $row['u_id'];
         $output .= '<div onclick="loadDoc('.$uid.');" class="list">
                     <div class="content">
-                        <img src="./images/sied.jpg" alt="">
+                        <img src="./images/'.$row['Image'].'" alt="">
                         <div class="details text-black">
                             <span>'.$row['FName']. " " .$row['lName']. '</span>
                             <p>'.$you.$msg.'</p>
