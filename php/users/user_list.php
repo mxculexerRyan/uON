@@ -1,7 +1,8 @@
 <?php 
     session_start();
     include_once "../config/config.php";
-    $sql = mysqli_query($conn,"SELECT * FROM users" );
+    $outgoing_id = $_SESSION['user_id'];
+    $sql = mysqli_query($conn,"SELECT * FROM users WHERE NOT u_id = '{$outgoing_id}'" );
     $output = "";
     if(mysqli_num_rows($sql) == 1){
         $output .="No Users Found";

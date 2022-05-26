@@ -3,7 +3,6 @@
     if(!isset($_SESSION['user_id'])){
         header("location: ./login.php");
     }
-    // include_once("../php/config.php"); 
     include_once("../php/config/config.php"); 
 ?>
 <div class="chat-area">
@@ -34,57 +33,20 @@
     </div>
 
     <div class="chat-box bg-base">
-        <div class="chat-view">
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Hello group Welcome</p>
-                </div>
-            </div>
-
-            <div class="chat incoming">
-                <img src="./images/oga.jpg" alt="">
-                <div class="details">
-                    <p>Hello i am oga</p>
-                </div>
-            </div>
-
-            <div class="chat incoming">
-                <img src="./images/zai.jpg" alt="">
-                <div class="details">
-                    <p>Hello i am Zai</p>
-                </div>
-            </div>
-
-            <div class="chat incoming">
-                <img src="./images/ayo.jpg" alt="">
-                <div class="details">
-                    <p>Helo i am Ayo</p>
-                </div>
-            </div>
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>anyone yet to introduce</p>
-                </div>
-            </div>
-
-            <div class="chat incoming">
-                <img src="./images/sied.jpg" alt="">
-                <div class="details">
-                    <p>Helo i am sied Am new here</p>
-                </div>
-            </div>
+        <div class="chat-view" id="chat-view">
+                
         </div>
 
         <div>
-            <form action="#">
+            <form action="#" id="typing-area" autocomplete="off">
                 <div class="row my-2">
                     <div class="col-10 mr-0 pr-0">
-                        <input type="text" class="form-control" placeholder="Your Text Here...." id="text">
+                        <input type="text" class="form-control" placeholder="Your Text Here...." id="input-field" name="message">
+                        <input type="text" name="outgoing_id" id="outgoing_id" value="<?php echo $_SESSION['user_id'];?>" hidden>
+                        <input type="text" name="incoming_id" id="incoming_id" value="<?php echo $g_id;?>" hidden>
                     </div>
                     <div class="col-2 ml-0">
-                        <span class="btn btn-outline-info">
-                            <i class="fab fa-telegram-plane fa-lg"></i>
-                        </span>
+                        <button type="submit" class="btn btn-outline-info" id="sendBtn"><i class="fab fa-telegram-plane fa-lg"></i></button>
                     </div>
                 </div>
             </form>

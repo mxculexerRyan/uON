@@ -188,4 +188,5 @@
             });
         </script>
         <script src="./js/sign_up.js"></script>
+        <script src="./js/password/pass-show-hide.js"></script>
         <?php include_once("./includes/footer.php")?>

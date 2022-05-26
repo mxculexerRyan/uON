@@ -53,4 +53,5 @@
             </section>
         </div>
         <script src="./js/log_in.js"></script>
+        <script src="./js/password/pass-show-hide.js"></script>
         <?php include_once("./includes/footer.php")?>

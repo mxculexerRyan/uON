@@ -20,8 +20,8 @@
                 }
             ?>
         </div>
-        <div class="header-details">
-            <span><?php echo $row["FName"]." ".$row["lName"] ?></span>
+        <div class="header-details col-5">
+            <span class="text-center"><?php echo $row["FName"]." ".$row["lName"] ?></span>
             <p><?php echo $row["Email"]; ?></p>
         </div>
             <div class="content">
@@ -34,65 +34,23 @@
     </div>
 
     <div class="chat-box bg-base">
-        <div class="chat-view">
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Loremg elit labore odit </p>
-                </div>
-            </div>
-
-            <div class="chat incoming">
-                <img src="./images/zai.jpg" alt="">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet consectetur </p>
-                </div>
-            </div>
-
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Loremg elit labore odit </p>
-                </div>
-            </div>
-
-            <div class="chat incoming">
-                <img src="./images/zai.jpg" alt="">
-                <div class="details">
-                    <p>excepturi, Quia magnam numquam tenetur delectus</p>
-                </div>
-            </div>
-
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>excepturi, Quia magnam </p>
-                </div>
-            </div>
-
-            <div class="chat incoming">
-                <img src="./images/zai.jpg" alt="">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum mollitia veritatis amet odit incidunt porro commodi nisi provident quisquam! Ullam placeat ipsa velit, repellendus facere necessitatibus dolor in debitis?</p>
-                </div>
-            </div>
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, facilis. Voluptatibus culpa vitae, similique nobis dolor ex voluptatem minus. Dolore cumque vitae, a dolorem ipsa officiis in ipsum ipsam harum.</p>
-                </div>
-            </div>
+        <div class="chat-view" id="chat-view">
+            
         </div>
 
         <div>
-            <form action="#">
+            <form action="#" id="typing-area" autocomplete="off">
                 <div class="row my-2">
                     <div class="col-10 mr-0 pr-0">
-                        <input type="text" class="form-control" placeholder="Your Text Here...." id="text">
+                        <input type="text" name="message" class="form-control" placeholder="Your Text Here...." id="input-field">
+                        <input type="text" name="outgoing_id" id="outgoing_id" value="<?php echo $_SESSION['user_id'];?>" hidden>
+                        <input type="text" name="incoming_id" id="incoming_id" value="<?php echo $u_id;?>" hidden>
                     </div>
                     <div class="col-2 ml-0">
-                        <span class="btn btn-outline-info">
-                            <i class="fab fa-telegram-plane fa-lg"></i>
-                        </span>
+                        <button type="submit" class="btn btn-outline-info" id="sendBtn"><i class="fab fa-telegram-plane fa-lg"></i></button>
                     </div>
                 </div>
             </form>
         </div>
-    </div>
+    </div>  
 </div>

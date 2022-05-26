@@ -1,0 +1,2 @@
+ErrorDocument 403 http://localhost/uon/access/acces_denied.php
+ErrorDocument 404 http://localhost/uon/access/not_found.php

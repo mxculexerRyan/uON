@@ -18,5 +18,6 @@
         <link rel="stylesheet" href="./css/boot-edit.css">
         <link rel="stylesheet" href="./css/dark-mode.css">
         <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/dp-style.css">
         <title> Realtime Chat App </title>
     </head>
