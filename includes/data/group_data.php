@@ -17,7 +17,7 @@
         $gid= $row['g_id'];
         $output .= '<div onclick="showgrp('.$gid.');" class="list">
                     <div class="content">
-                        <img src="./images/oga.jpg" alt="">
+                        <img src="./images/'.$row['g_image'].'" alt="">
                         <div class="details text-black">
                             <span>'.$row['group_name'].'</span>
                             <p>'.$you.$msg.'</p>

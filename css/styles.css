@@ -294,6 +294,7 @@ a, a:link, a:visited, a:hoover, a:active{
     text-align: end;
     align-items: flex-end;
     color: #ccc;
+    margin-left: 90%;
 }
 .chat-box .chat{
     margin: 15px 0;
@@ -318,7 +319,7 @@ a, a:link, a:visited, a:hoover, a:active{
 }
 .incoming .details p{
     margin-left: 10px;
-    min-width: 120px;
+    min-width: 150px;
     background: #d3c9c9;
     border-radius: 18px 18px 18px 0 !important;
 }
@@ -330,6 +331,7 @@ a, a:link, a:visited, a:hoover, a:active{
     font-size: 11px;
     text-align: end;
     align-items: flex-end;
+    margin-left: 90%;
 }
 
 /* End of chat list css */

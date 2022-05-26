@@ -1,12 +1,12 @@
 .upload{
-    width: 280px;
+    width: 240px;
     position: relative;
     margin: auto;
   }
   
   .upload img{
     border-radius: 50%;
-    border: 8px solid #DCDCDC;
+    border: 2px solid #DCDCDC !important;
   }
   
   .upload .round{

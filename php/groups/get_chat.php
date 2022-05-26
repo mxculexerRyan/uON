@@ -8,7 +8,7 @@
 
         // $sql = mysqli_query($conn, "SELECT * FROM group_messages WHERE (receiver_id = '{$incoming_id}')");
         $sql = mysqli_query($conn, "SELECT gmsg_id, sender_id, receiver_id, msg, send_time, receive_time, 
-            users.Username AS uname, users.u_id FROM group_messages, users WHERE ((sender_id = users.u_id)
+            users.Username AS uname, users.u_id, users.Image FROM group_messages, users WHERE ((sender_id = users.u_id)
             && (receiver_id = '{$incoming_id}')) ORDER BY gmsg_id ASC");
 
         if(mysqli_num_rows($sql) > 0){
@@ -24,7 +24,7 @@
                                 </div>';
                 }else{
                     $output .= '<div class="chat incoming">
-                                    <img src="./images/zai.jpg" alt="">
+                                    <img src="./images/'.$row['Image'].'" alt="">
                                     <div class="details">
                                         <p>
                                             <b><span>'.$row['uname'].': </span></b>

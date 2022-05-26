@@ -11,7 +11,6 @@
             <span class="btn btn-outline-info m-2" onclick="stopld()">
                 <i class="fas fa-arrow-left fa-lg"></i>
             </span>
-            <img src="./images/zai.jpg" alt="Zai's image">
             <?php
                 $u_id = $_REQUEST["q"];
                 $sql = "SELECT * FROM users where  u_id = '{$u_id}'";
@@ -19,6 +18,7 @@
                 if ($row = $result->fetch_assoc()){
                 }
             ?>
+            <img src="./images/<?php echo $row['Image'] ?>" alt="Zai's image">
         </div>
         <div class="header-details col-5">
             <span class="text-center"><?php echo $row["FName"]." ".$row["lName"] ?></span>
