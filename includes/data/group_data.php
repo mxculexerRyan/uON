@@ -1,7 +1,7 @@
 <?php
     $gid = "";
     while($row = mysqli_fetch_assoc($sql)){
-        $sql2 = mysqli_query($conn, "SELECT * FROM group_messages WHERE (receiver_id = '{$row['g_id']}') ORDER BY gmsg_id DESC LIMIT 1");
+        $sql2 = mysqli_query($conn, "SELECT * FROM group_messages WHERE (receiver_id = '{$row['group_id']}') ORDER BY gmsg_id DESC LIMIT 1");
             $row2 = mysqli_fetch_assoc($sql2);
             if(mysqli_num_rows($sql2) > 0){
                 $result = $row2['msg'];
@@ -14,7 +14,7 @@
             // trimming the message if the word is more tha 28 characters
             (strlen($result)  > 35) ? $msg = substr($result, 0, 35).'...' : $msg = $result;
 
-        $gid= $row['g_id'];
+        $gid= $row['group_id'];
         $output .= '<div onclick="showgrp('.$gid.');" class="list">
                     <div class="content">
                         <img src="./images/'.$row['g_image'].'" alt="">

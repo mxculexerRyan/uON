@@ -9,8 +9,13 @@
         $receive_time = $time;
         
         if(!empty($message)){
-            $sql = mysqli_query($conn, "INSERT INTO messages (sender_id, receiver_id, msg, receive_time) 
-                                VALUES ('{$outgoing_id}', '{$incoming_id}', '{$message}', '{$time}')") OR die();
+            if($sql = mysqli_query($conn, "INSERT INTO messages ( msg, receive_time) 
+                VALUES ('{$message}', '{$time}')") OR die()){
+                    $last_id = mysqli_insert_id($conn);
+                    $sql2 = mysqli_query($conn, "INSERT INTO user_messages (sender_id, receiver_id, msg_id)
+                        VALUES ('{$outgoing_id}', '{$incoming_id}', '{$last_id}')");
+                }
+            
         }
     }else{
         header("location: ./login.php");
