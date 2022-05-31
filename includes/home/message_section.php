@@ -2,11 +2,11 @@
 <div class="d-flex">
     <h4 class="text-info mr-auto">Messages</h4>
     <nav class="d-flex">
-        <a class="nav-link active" href="./home.php">Edit</a>
-        <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-search"></i></a>
+        <button class="btn btn-outline-info mx-1 my-1" id="edit"><i id="edit" class="fas fa-ellipsis text-info"></i></button>
+        <button class="btn btn-outline-info mx-1 my-1" id="search-Btn"><i id="searchbtn" class="fas fa-search text-info"></i></button>
         <div class="action">
             <div class="profile">
-                <a href="#" class="nav-link"><i id="write" class="fas fa-edit"></i></a>
+                <button type="submit" class="btn btn-outline-info my-1" id="search-Btn"><i class="fab fa-buromobelexperte fa-lg text-info"></i></button>
             </div>
             <div class="menu">
                 <h3>Someone Famous<br>

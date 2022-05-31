@@ -8,8 +8,26 @@
             $row2 = mysqli_fetch_assoc($sql2);
             if(mysqli_num_rows($sql2) > 0){
                 $result = $row2['msg'];
+                
                 $time = $row2['send_time'];
-                $send_time = substr($time, 11,5);
+                $send_date = substr($time, 0, 10);
+                $now = date("Y-m-d");
+                
+                $date1=date_create($send_date);
+                $date2=date_create($now);
+                $diff=date_diff($date1,$date2);
+                $days = $diff->format("%a");
+
+                if($days == 0){
+                    $send_time = "today";
+                }elseif ($days == 1) {
+                    $send_time = "Yesteday";
+                }elseif ($days > 1 AND $days < 8 ) {
+                    $send_time = date("l", strtotime($send_date));
+                }else{
+                    $send_time = $send_date;
+                }
+
                 ($outgoing_id == $row2['sender_id']) ? $you = "You: " : $you = " ";
             }else{
                 $result = "No Message to display here yet!";
