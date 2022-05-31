@@ -5,10 +5,13 @@
             $row2 = mysqli_fetch_assoc($sql2);
             if(mysqli_num_rows($sql2) > 0){
                 $result = $row2['msg'];
+                $time = $row2['send_time'];
+                $send_time = substr($time, 11,5);
                 ($outgoing_id == $row2['sender_id']) ? $you = "You: " : $you = " ";
             }else{
                 $result = "Tap to start Conversation Here";
                 $you = "";
+                $send_time = "";
             }
 
             // trimming the message if the word is more tha 28 characters
@@ -24,7 +27,7 @@
                         </div>
                     </div>
                     <div class="time text-black">
-                        <p>11:00 <span><i class="fas fa-angle-right"></i></span> </p>
+                        <p>'.$send_time.' <span><i class="fas fa-angle-right"></i></span> </p>
                     </div>
                 </div>';
     }

@@ -41,5 +41,4 @@
             </div>
         </div>
         <script src="./js/home.js"></script>
-        <script src="./js/chat/chat.js"></script>
         <?php include_once("./includes/footer.php")?>

@@ -48,10 +48,17 @@
   color :#2e2e2e  !important
 }
 
-[data-theme="dark"].group-list .list{
+[data-theme="dark"] .group-list .list{
   border-bottom: 1px solid#2e2e2e !important;
 }
 [data-theme="dark"] .group-list .list .content p{
+  color :#3bcaee !important
+}
+
+[data-theme="dark"] .search-list .list{
+  border-bottom: 1px solid#2e2e2e !important;
+}
+[data-theme="dark"] .search-list .list .content p{
   color :#3bcaee !important
 }
 /* progresbar and step dark css */

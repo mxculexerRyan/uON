@@ -152,7 +152,6 @@ a, a:link, a:visited, a:hoover, a:active{
     display: flex;
     justify-content: space-between !important;
 }
-
 .chat-list .list .content p{
     color: #314cb6 ;
 }
@@ -169,6 +168,10 @@ a, a:link, a:visited, a:hoover, a:active{
     /* color: #000; */
 }
 .content img{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -182,6 +185,12 @@ a, a:link, a:visited, a:hoover, a:active{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.chat-area .header img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
 }
 .chat-area .header .header-details{
     align-items: center;
@@ -264,7 +273,63 @@ a, a:link, a:visited, a:hoover, a:active{
 }
 /* End of group-list css */
 
+/* start of search list  */
+.search-list{
+    max-height: 650px;
+    overflow-y: auto;
 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* max-height: fit-content; */
+}
+
+.search-list .list{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding-right: 15px;
+    text-decoration: none !important;
+    border-bottom: 1px solid #e6e6e6;
+
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    cursor: pointer;
+}
+
+.search-list .list:last-child{
+    border: none;
+    margin-bottom: 0px;
+}
+.search-list .list .content{
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.search-list .list .content p{
+    color: #314cb6 ;
+}
+.search-list .list .content img{
+    height: 50px;
+    width: 50px;
+}
+.search-list .content{
+    display: flex;
+}
+.search-list .content .details{
+    margin-left: 15px;
+}
+
+.search-list .header img{
+    object-fit: cover;
+    border-radius: 15px;
+    height: 40px;
+    width: 40px;
+}
+.search-list::-webkit-scrollbar{
+    display: none;
+}
+/* end  of search list  */
 /* Start of chat box css */
 .chat-box{
     height: 500px;
@@ -400,3 +465,51 @@ a, a:link, a:visited, a:hoover, a:active{
     align-items: center;
 }
 /* :end of post css  */
+
+.action .menu{
+    position: absolute;
+    top: 41px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: 0.5s;
+    width: 220px;
+    visibility: hidden;
+    opacity: 0;
+}
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 11px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.action .menu h3{
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 0;
+    color: #555;
+    line-height: 1.2em;
+}
+.action .menu h3 span{
+    font-size: 14px;
+    color: #cecece;
+    font-weight: 400;
+}
+.action .menu ul li{
+    list-style: none;
+    padding: 5px 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.action .menu ul li i{
+    min-width: 20px;
+}

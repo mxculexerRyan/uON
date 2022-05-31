@@ -4,7 +4,22 @@
     <nav class="d-flex">
         <a class="nav-link active" href="./home.php">Edit</a>
         <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-search"></i></a>
-        <a href="#" class="nav-link"><i id="write" class="fas fa-edit"></i></a>
+        <div class="action">
+            <div class="profile">
+                <a href="#" class="nav-link"><i id="write" class="fas fa-edit"></i></a>
+            </div>
+            <div class="menu">
+                <h3>Someone Famous<br>
+                    <span>Website Designer</span>
+                </h3>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-user"> Search User</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-edit"> Edi</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-cogs"> Settings</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-search"> Search User</i></a>
+            </div>
+        </div>
+        
+
     </nav>
 </div>
 <div>
@@ -14,7 +29,7 @@
                 <input type="text"  id="searchbar" name="message" class="form-control" placeholder="Your Text Here....">
             </div>
             <div class="col-2 ml-0">
-                <button type="submit" class="btn btn-outline-info" id="search-Btn"><i class="fas fa-search fa-lg"></i></button>
+                <button type="submit" class="btn btn-outline-info" id="search-Btn"><i class="fas fa-filter fa-lg"></i></button>
             </div>
         </div>
     </form>
