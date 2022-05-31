@@ -7,16 +7,10 @@ $sql = mysqli_query($conn, "SELECT * FROM users WHERE u_id = '{$_SESSION['user_i
 if(mysqli_num_rows($sql) > 0){
     $row = mysqli_fetch_assoc($sql);
 }
-
 ?>
     <form class="form" id = "form" action="" enctype="multipart/form-data" method="post">
         <div class="upload">
-            <?php
-            $id = $row["u_id"];
-            $name = $row["Username"];
-            $image = $row["Image"];
-            ?>
-            <img src="../../../uON/images/<?php echo $image; ?>" width = 300 height = 300 title="<?php echo $image; ?>">
+            <img src="../../../uON/images/<?php echo $row["Image"]; ?>" width = 300 height = 300 title="<?php echo $row["Image"]; ?>">
             <div class="round">
                 <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png">
                 <i class = "fa fa-camera" style = "color: #fff;"></i>
@@ -46,7 +40,7 @@ if(mysqli_num_rows($sql) > 0){
         $new_image_name = $time.$img_name;
         
         if(move_uploaded_file($tmp_name, "./images/".$new_image_name)){ 
-            $query = "UPDATE users SET image = '$new_image_name' WHERE u_id = $id";
+            $query = "UPDATE users SET image = '$new_image_name' WHERE u_id = '{$row["u_id"]}'";
             mysqli_query($conn, $query);
             move_uploaded_file($tmp_name, './img/'.$new_image_name);
             echo "Please Refresh to view Uploaded Image";

@@ -116,6 +116,13 @@ a, a:link, a:visited, a:hoover, a:active{
 /* searching css */
 
 /* start of chat list css */
+.search-form{
+    display: none;
+}
+
+.search-form-active{
+    display: block;
+}
 .chat-list{
     max-height: 650px;
     overflow-y: auto;

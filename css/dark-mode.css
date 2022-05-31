@@ -33,7 +33,6 @@
 }
 
 [data-theme="dark"] .chat-list .list{
-  /* border-bottom: 1px solid #314cb6; */
   border-bottom: 1px solid#2e2e2e !important;
 }
 
@@ -46,7 +45,14 @@
 }
 
 [data-theme="dark"] .hr{
-  color :#fff !important
+  color :#2e2e2e  !important
+}
+
+[data-theme="dark"].group-list .list{
+  border-bottom: 1px solid#2e2e2e !important;
+}
+[data-theme="dark"] .group-list .list .content p{
+  color :#3bcaee !important
 }
 /* progresbar and step dark css */
 

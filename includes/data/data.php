@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="time text-black">
-                        <p>'.$send_time.'<span><i class="fas fa-angle-right"></i></span> </p>
+                        <p>'.$send_time.' <span><i class="fas fa-angle-right"></i></span> </p>
                     </div>
                 </div>';
     }
