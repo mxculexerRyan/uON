@@ -1,8 +1,3 @@
-const write = document.getElementById("write");
-write.onclick = ()=>{
-    
-}
-
 function sendMsg(){
     setTimeout(() => {
         const forms = document.getElementById("typing-area"),
