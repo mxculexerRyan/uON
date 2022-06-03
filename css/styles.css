@@ -471,13 +471,18 @@ a, a:link, a:visited, a:hoover, a:active{
     top: 41px;
     right: 20px;
     padding: 10px 20px;
-    background: #fff;
+    background: #e5eaf1;
     box-sizing: 0 5px 25px rgba(0,0,0,0.1);
     border-radius: 10px;
     transition: 0.5s;
     width: 220px;
     visibility: hidden;
     opacity: 0;
+    /* border: 1px solid #314cb6; */
+}
+.action .menu.active{
+    visibility: visible;
+    opacity: 1;
 }
 .action .menu::before{
     content: '';
@@ -486,8 +491,9 @@ a, a:link, a:visited, a:hoover, a:active{
     right: 11px;
     width: 20px;
     height: 20px;
-    background: #fff;
+    background: #e5eaf1;
     transform: rotate(45deg);
+    /* border: 1px solid #314cb6; */
 }
 .action .menu h3{
     width: 100%;
@@ -512,4 +518,20 @@ a, a:link, a:visited, a:hoover, a:active{
 }
 .action .menu ul li i{
     min-width: 20px;
+}
+
+.img-container img{
+    display: block;
+    max-width: 100%
+}
+.preview{
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin: 10px;
+    border: 1px solid red;
+}
+.modal-lg{
+    max-width: 1000px !important;
+    max-height: 10px !important;
 }

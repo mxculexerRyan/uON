@@ -104,3 +104,9 @@
 [data-theme="dark"] .btn-outline-info:hover{
   background-color:#000 !important;
 }
+[data-theme="dark"] .action .menu::before{
+  background-color: #4a4747 !important;
+}
+[data-theme="dark"] .action .menu{
+  background-color: #4a4747 !important;
+}

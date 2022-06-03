@@ -5,17 +5,18 @@
         <button class="btn btn-outline-info mx-1 my-1" id="edit"><i id="edit" class="fas fa-ellipsis text-info"></i></button>
         <button class="btn btn-outline-info mx-1 my-1" id="search-Btn"><i id="searchbtn" class="fas fa-search text-info"></i></button>
         <div class="action">
-            <div class="profile">
-                <button type="submit" class="btn btn-outline-info my-1" id="search-Btn"><i class="fab fa-buromobelexperte fa-lg text-info"></i></button>
+            <div class="profile" onclick="menuToggle()">
+                <button type="submit" class="btn btn-outline-info my-1" id="apps"><i class="fab fa-buromobelexperte fa-lg text-info"></i></button>
             </div>
-            <div class="menu">
-                <h3>Someone Famous<br>
-                    <span>Website Designer</span>
+            <div class="menu" id="menu">
+                <h3 class="text-black">Someone Famous<br>
+                    <span class="text-info">Website Designer</span>
                 </h3>
-                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-user"> Search User</i></a>
-                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-edit"> Edi</i></a>
-                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-cogs"> Settings</i></a>
-                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-search"> Search User</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-group text-black"> Create Group</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-edit text-black"> Edit Biography</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-cogs text-black"> Settings</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-search text-black"> Search User</i></a>
+                <a href="#" class="nav-link"><i id="searchbtn" class="fas fa-user text-black"> About uON</i></a>
             </div>
         </div>
         
@@ -46,3 +47,10 @@
 </div>
 <script src="../../../uON/js/users/users_list.js"></script>
 <script src="../../../uON/js/search/search.js"></script>
+<script>
+    function menuToggle(){
+    const toggleMenu = document.getElementById("menu");
+    toggleMenu.classList.toggle('active');
+}
+
+</script>
