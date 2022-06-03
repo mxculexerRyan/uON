@@ -6,6 +6,8 @@
     include_once("./php/config/config.php");
     include_once("./includes/header.php");
 ?>
+<link rel="stylesheet" href="./imported/styles/cropper/cropper.css">
+<script src="./imported/js/cropper/cropper.js"></script>
 <body>
     <div class="fluid-container d-flex p-3 mx-auto flex-column">
         <header class="mb-auto">
