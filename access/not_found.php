@@ -33,7 +33,7 @@
 
             <div class="center-div">
                 <h2>Error: 404</h2>
-                <h5>page Not Found</h5>
+                <h5>The Page Your Loking for Is not Available</h5>
                 <p>~Kindly Go back or re-write the URL~</p>
 
             </div>

@@ -33,10 +33,10 @@
 
             <div class="center-div">
                 <h2>Error: 403</h2>
-                <h5>page Access Denied</h5>
+                <h5>Access to this page is currently Denied</h5>
                 <p>~Kindly Go back or re-write the URL~</p>
 
             </div>
         </div>
         
-        <?php include_once("./includes/footer.php")?>
+        <?php include_once("../includes/footer.php")?>
