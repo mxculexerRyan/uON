@@ -1,4 +1,11 @@
 <?php
+if(basename($_SERVER['REQUEST_URI']) == basename(__FILE__)){
+    header("location: ../access/access_denied.php");
+    exit();
+};
+?>
+
+<?php
     session_start();
     if(!isset($_SESSION['user_id'])){
         header("location: ./login.php");
