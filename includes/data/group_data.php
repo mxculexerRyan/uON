@@ -5,8 +5,9 @@
             $row2 = mysqli_fetch_assoc($sql2);
             if(mysqli_num_rows($sql2) > 0){
                 $result = $row2['msg'];
-                $time = $row2['send_time'];
-                $send_date = substr($time, 0, 10);
+                $dbase_time = $row2['send_time'];
+                $time = substr($dbase_time, 11, 5);
+                $send_date = substr($dbase_time, 0, 10);
                 $now = date("Y-m-d");
                 
                 $date1=date_create($send_date);
@@ -15,7 +16,7 @@
                 $days = $diff->format("%a");
 
                 if($days == 0){
-                    $send_time = "today";
+                    $send_time = $time;
                 }elseif ($days == 1) {
                     $send_time = "Yesteday";
                 }elseif ($days > 1 AND $days < 8 ) {
